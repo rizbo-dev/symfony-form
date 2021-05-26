@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="py-5">
+        <div class="container">
+            <div class="row hidden-md-up">
+                {% for vegetable in vegetables %}
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="{{ vegetable.image }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ vegetable.name }}</h5>
+                                <p class="card-text">{{ vegetable.description }}</p>
+                                <a href="#" class="btn btn-primary">Buy for {{ vegetable.price }}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block title %}
+    List of vegetables
+{% endblock %}
+

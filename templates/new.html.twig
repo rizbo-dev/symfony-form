@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+ {% block body %}
+<h1>New VEGETABLE!</h1>
+
+     {{ form_start(vegetableFrom) }}
+        {{ form_widget(vegetableFrom) }}
+
+
+     <button type="submit" class="btn btn-primary">Create!</button>
+     {{ form_end(vegetableFrom) }}
+
+{% endblock %}
